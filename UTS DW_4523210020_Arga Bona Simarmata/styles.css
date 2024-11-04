@@ -1,0 +1,365 @@
+:root {
+    --primary-color: #FF0000;
+    --text-color: #FFD700;
+    --background-color: #1E90FF;
+    --card-background-color: #f5f5f5;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --btn-hover-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav a {
+    color: var(--text-color);
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: #fff;
+}
+
+.navbar-extra a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 25%);
+}
+
+.hero .content {
+    padding: 1.4rem 5%;
+    max-width: 60rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero .content h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .content p {
+    font-size: 1.2em;
+    margin-top: 1rem;
+    color: #f5f5f5;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--text-color);
+    color: var(--primary-color);
+    border-radius: 0.3rem;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: var(--btn-hover-color);
+    color: var(--primary-color);
+}
+
+.one-piece-intro {
+    padding: 4rem 5%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1000px;
+}
+
+.intro-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0; 
+    width: 300px; 
+}
+
+.intro-content {
+    max-width: 600px;
+    color: #fff;
+}
+
+.crew {
+    padding: 5rem 5%;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+}
+
+.crew h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.crew-card {
+    background: var(--card-background-color);
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0px 4px 8px var(--shadow-color);
+    border-radius: 0.5rem;
+    width: calc(100% / 5 - 2rem);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crew-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.crew-card-img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10%;
+    margin-bottom: 1rem;
+}
+
+.crew-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.crew-card p {
+    color: #777;
+}
+
+.crew-card p:last-of-type {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.one-piece-intro {
+    padding: 5rem 5%;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+}
+
+.intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact {
+    padding: 5rem 5%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon i {
+    margin-right: 0.5rem;
+}
+
+.social-icon:hover {
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .crew-card {
+        width: calc(100% / 3 - 2rem);
+    }
+    #hamburger-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-extra {
+        display: flex;
+    }
+
+    .hero .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image {
+        width: 100%; 
+        max-width: 300px; 
+    }
+
+    .intro-content {
+        margin-top: 1rem;
+    }
+
+    .crew-card {
+        width: calc(100% / 2 - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .content h1 {
+        font-size: 2rem;
+    }
+
+    .crew-card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
